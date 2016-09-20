@@ -1,0 +1,28 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="de.wegelin.controller.Create"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout">
+	<Page title="Create new supplier">
+		<content>
+			<f:SimpleForm>
+				<Label text="Name" />
+				<Input value="{newSupplier>/Name}" />
+				<Label text="Street" />
+				<Input value="{newSupplier>/Address/Street}" />
+				<Label text="City" />
+				<Input value="{newSupplier>/Address/City}" />
+				<Label text="State" />
+				<Input value="{newSupplier>/Address/State}" />
+				<Label text="Country" />
+				<Input value="{newSupplier>/Address/Country}" />
+				<Label text="Zip Code" />
+				<Input value="{newSupplier>/Address/ZipCode}" />
+			</f:SimpleForm>
+		</content>
+		<footer>
+			<OverflowToolbar id="footerToolbar">
+				<ToolbarSpacer/>
+				<Button id="btnSave" text="Save" tooltip="Save this supplier" type="Accept" press="onSave"></Button>
+				<Button id="btnCancel" text="Cancel" tooltip="Cancel" type="Reject" press="onCancel"></Button>
+			</OverflowToolbar>
+		</footer>
+	</Page>
+</mvc:View>
